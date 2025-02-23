@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="profile-container">
+        <input type="file" id="avatarInput" style="display: none" onchange="updateAvatar(event)">
+        <div class="img">
+            <img src="../img/avatar.jpg" alt="Ảnh đại diện" class="avatar">
+            <button class="camera-button" onclick="changeAvatar()" title="Đổi ảnh đại diện."><i
+                    class='bx bx-camera'></i></button>
+        </div>
+
+        <div class="info">
+            <div class="name">
+                <h1 id="displayName">Lê Thị Hương</h1>
+                <button class="edit-name-button" onclick="editName()" title="Đổi tên.">
+                    <i class='bx bx-edit-alt'></i>
+                </button>
+            </div>
+
+            <div id="nameBox" class="name-box" style="display: none;">
+                <input type="text" id="nameInput" value="Lê Thị Hương">
+                <button onclick="saveName()">Lưu</button>
+                <button onclick="cancelEdit()">Hủy</button>
+            </div>
+
+            <p class="description">
+                Sinh viên năm 4 Trường Đại học Khoa học Tự nhiên.
+            </p>
+            <div class="hobby">
+                <h4 id="displayHobbies">Sở Thích:</h4>
+                <button class="edit-hobbies-button" onclick="editHobbies()" title="Thêm, sửa hoặc xóa sở thích.">
+                    <i class='bx bx-edit-alt'></i>
+                </button>
+            </div>
+            <div id="hobbiesBox" class="hobbiesBox" style="display: none;">
+                <div id="hobbyInputs"></div>
+                <button onclick="addHobbyInput()">Thêm</button>
+                <button onclick="saveHobbies()">Lưu</button>
+                <button onclick="cancelEdit()">Hủy</button>
+                <div id="hobbyInputs"></div>
+            </div>
+            <ul class="list-hobbies" id="hobbyList"></ul>
+        </div>
+    </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
