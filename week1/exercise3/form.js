@@ -28,13 +28,13 @@ document.getElementById("form").addEventListener("submit", function(event) {
         isValid = false;
     }
 
-    // Validate ngày sinh (không được lớn hơn ngày hiện tại)
+    // Validate ngày sinh 
     if (!ngaySinh || new Date(ngaySinh) >= new Date()) {
         showError("ngay_sinh", "Ngày sinh không hợp lệ.");
         isValid = false;
     }
 
-    // Validate số điện thoại (10 chữ số)
+    // Validate số điện thoại 
     let phoneRegex = /^[0-9]{10}$/;
     if (sdt && !phoneRegex.test(sdt)) {
         showError("sdt", "Số điện thoại phải có 10 chữ số.");
@@ -48,7 +48,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
         isValid = false;
     }
 
-    // Validate giới tính (không được bỏ trống)
+    // Validate giới tính
     if (!gender) {
         showError("gender", "Vui lòng chọn giới tính.");
         isValid = false;
@@ -60,7 +60,6 @@ document.getElementById("form").addEventListener("submit", function(event) {
         isValid = false;
     }
 
-    // Nếu hợp lệ, lưu vào đối tượng NhanVien
     if (isValid) {
         NhanVien.ho_ten = hoTen;
         NhanVien.ngay_sinh = ngaySinh;
@@ -70,9 +69,30 @@ document.getElementById("form").addEventListener("submit", function(event) {
         NhanVien.address = address;
 
         console.log("Dữ liệu nhân viên đã lưu:", NhanVien);
-        alert("Dữ liệu hợp lệ, đã lưu thành công!");
+        alert("Gửi form thành công!");
     }
 });
+
+//keyup
+document.getElementById("form").addEventListener("keyup", function(event) {
+    if (event.target.tagName === "INPUT" || event.target.tagName === "SELECT") {
+        let input = event.target.name;
+        NhanVien[input] = event.target.value.trim();
+        console.log(NhanVien); // kiểm tra
+    }
+});
+
+// nếu ng dùng thay đổi giới tính thì vẫn cập nhật
+document.getElementById("gender").addEventListener("change", function() {
+    NhanVien.gender = this.value;
+    console.log(NhanVien);
+});
+
+// document.querySelectorAll("input").forEach(input => {
+//     input.addEventListener("keyup", function () {
+//         validateInput(this.id);
+//     });
+// });
 
 // Hàm hiển thị lỗi
 function showError(inputId, message) {
