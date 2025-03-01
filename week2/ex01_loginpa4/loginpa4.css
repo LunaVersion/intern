@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.login-box{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 600px;
+}
+.logo {
+    display: grid;
+    place-items: center;
+}
+.image {
+    width: 100px;
+    height: 80px;
+    overflow: hidden;
+}
+.input_number {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    border-color: whitesmoke;
+    padding-left: 15px;
+    font-size: 20px;
+    margin: 5px;
+}
+.btn {
+    width: 85%;
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 42px;
+}
+.lang {
+    display: flex;
+    justify-content: center;
+}
+footer {
+    position: fixed;
+    bottom: 0;  /* Cố định ở đáy màn hình */
+    left: 0;  /* Căn sát lề trái */
+    width: 100%;  /* Chiếm toàn bộ chiều rộng */
+    text-align: center;
+    padding: 10px;
+}

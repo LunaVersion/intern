@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="benhvienk3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<header>
+    <div class="header">
+        <div class="left-header">
+            <div class="logo d-flex justify-content-center">
+                <div class="image" style="width: 80px; height: 45px; overflow: hidden;">
+                    <img class="logo-image" src="../img/logo-minerva.png" alt="" width="80px" height="60px">
+                </div>
+                <h6>PHẦN MỀM CHUẨN ĐOÁN HÌNH ẢNH</h6>
+            </div>
+        </div>
+        <div class="right-header">
+            <div class="button d-flex justify-content-center">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="button-item-left"><i class='bx bxs-folder-open'></i></button>
+                    <button class="button-item-right"><i class='bx bxs-collection'></i></button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="button-item-left"><i class='bx bxs-folder-open'></i></button>
+                    <button class="button-item-right"><i class='bx bxs-collection'></i></button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="button-chart"><i class='bx bx-line-chart'></i></button>
+                </div>
+            </div>
+            <div class="master">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Bệnh viện K1 </option>
+                    <option value="1">Bệnh viện K2</option>
+                </select>
+            </div>
+            <div class="user">
+                <div class="avatar">
+                    <img class="avatar-img" src="../img/avatar.jpg" alt="">
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle custom-dropdown" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Bs. Nguyễn Mạnh Hà
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="sidebar d-flex flex-column">
+        <!-- Phần trên sidebar -->
+        <div class="top">
+            <div class="cau-hinh"><b>Cây làm việc</b></div>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#filter">Bộ lọc</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile">Lưu trữ</button>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="filter">
+                    <div class="accordion" id="filterAccordion">
+                        <!-- 1 -->
+                        <div class="accordion-item" style="background-color: #dbdbdb;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button"
+                                    style="background-color: #dbdbdb;" data-bs-toggle="collapse"
+                                    data-bs-target="#filter1">
+                                    <span><i class='bx bxs-folder'></i> CT</span>
+                                </button>
+                            </h2>
+                            <div id="filter1" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <!-- 1.1 -->
+                                    <p style="padding-top: 5px; padding-left: 60px; margin-bottom: 5px;"><i
+                                            class='bx bxs-folder'></i> CT01</p>
+                                </div>
+                                <div class="accordion-body">
+                                    <!-- 1.2 -->
+                                    <p style="padding-top: 5px; padding-left: 60px; margin-bottom: 5px;"><i
+                                            class='bx bxs-folder'></i> CT02</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#filter2">
+                                    <span><i class='bx bxs-folder'></i> MR</span>
+                                </button>
+                            </h2>
+                            <div id="filter2" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="accordion-item" style="background-color: #dbdbdb;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button"
+                                    style="background-color: #dbdbdb;" data-bs-toggle="collapse"
+                                    data-bs-target="#filter3">
+                                    <span><i class='bx bxs-folder'></i> US</span>
+                                </button>
+                            </h2>
+                            <div id="filter3" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#filter4">
+                                    <span><i class='bx bxs-folder'></i> ED</span>
+                                </button>
+                            </h2>
+                            <div id="filter4" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 5 -->
+                        <div class="accordion-item" style="background-color: #dbdbdb;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button"
+                                    style="background-color: #dbdbdb;" data-bs-toggle="collapse"
+                                    data-bs-target="#filter5">
+                                    <span><i class='bx bxs-folder'></i> XA</span>
+                                </button>
+                            </h2>
+                            <div id="filter5" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile">bla bla bla</div>
+            </div>
+        </div>
+        <!-- Phần dưới sidebar -->
+        <div class="under">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#inf">Thông tin ca</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#preview">Xem trước</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#history">Lịch sử</button>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="inf">
+                    <div class="inf patient-inf">
+                        <b>THÔNG TIN BỆNH NHÂN</b>
+                        <div class="row">
+                            <div class="col-4">PID:</div>
+                            <div class="col-8">123456789</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">Họ và tên:</div>
+                            <div class="col-8">Nguyễn Thị Thảo</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">Năm sinh</div>
+                            <div class="col-8">1942</div>
+                        </div>
+                    </div>
+                    <div class="inf ca-inf">
+                        <b>THÔNG TIN CA</b>
+                        <div class="row">
+                            <div class="col-4">Ngày chụp:</div>
+                            <div class="col-8">22/11/2018 09:33</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">Bộ phận:</div>
+                            <div class="col-8">HEAD</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">Ghi chú:</div>
+                            <div class="col-8">CCM NAO CRNN</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">Máy chụp</div>
+                            <div class="col-8">CT204</div>
+                        </div>
+                    </div>
+                    <div class="inf requires">
+                        <b>YÊU CẦU CHUẨN ĐOÁN</b>
+                        <div class="row">
+                            <div class="col-4">Ưu tiên:</div>
+                            <div class="col-8">CC</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">CD lâm sàng:</div>
+                            <div class="col-8">J18 - Viêm phổi, tác nhân không đặc hiệu</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">Bác sĩ chỉ định:</div>
+                            <div class="col-8"> Bs. Nguyễn Thị Cúc (Nội Tiết - Hô Hấp)</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">Chỉ định:</div>
+                            <div class="col-8">A-Chụp CLVT tầng trên ổ bụng có khảo sát mạch các tạng [bao gồm mạch:
+                                gan, tụy, lách và mạch khối u] [từ 1-32 dãy]</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="preview">Trống</div>
+                <div class="tab-pane fade" id="history">Trống</div>
+            </div>
+        </div>
+    </div>
+    <div class="content" style="margin-left: 275px;">
+        <ul class="nav nav-tabs content" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#danh-sach-ca">Danh sách
+                    ca</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#name1">Đoan Hoang Giang</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#name2">Quynh Nguyen</button>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="danh-sach-ca">
+                <div class="menu mt-3">
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-2">
+                            <label for="ma-benh-nhan" class="form-label">Mã bệnh nhân</label>
+                            <input type="text" class="form-control" id="ma-benh-nhan">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="ten-benh-nhan" class="form-label">Tên bệnh nhân</label>
+                            <input type="text" class="form-control" id="ten-benh-nhan">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="trang-thai" class="form-label">Trạng thái</label>
+                            <select id="trang-thai" class="form-select bg-white">
+                                <option selected>Tất cả</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="dateRangePicker" class="form-label">Ngày chụp </label>
+                            <input type="text" id="dateRangePicker" class="form-control" />
+                        </div>
+                        <div class="col-md-2">
+                            <label for="ket-qua-doc" class="form-label">Kết quả đọc</label>
+                            <input type="text" class="form-control" id="ket-qua-doc">
+                        </div>
+                        <div class="col-md-1 d-flex align-items-end">
+                            <button id="reset" class="form-control">Làm mới</button>
+                        </div>
+                        <div class="col-md-1 d-flex align-items-end">
+                            <button id="nang-cao" class="form-control">Nâng cao</button>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-2">
+                            <label for="nam-sinh" class="form-label">Năm sinh</label>
+                            <input type="text" class="form-control" id="nam-sinh">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="giơi-tinh" class="form-label">Giới tính</label>
+                            <select id="gioi-tinh" class="form-select bg-white">
+                                <option selected>Nam</option>
+                                <option>Nữ</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="loai-chup" class="form-label">Loại chụp</label>
+                            <select id="loai-chup" class="form-select bg-white">
+                                <option selected>Tất cả</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="ghi-chu" class="form-label">Ghi chú</label>
+                            <input type="text" class="form-control" id="ghi-chu">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="ma-benh" class="form-label">Mã bệnh</label>
+                            <select id="ma-benh" class="form-select bg-white">
+                                <option></option>
+                                <option>...1...</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination-container">
+                    <button class="page-btn" style="margin-left: 30px;">❮</button>
+                    <button class="page-btn" style="margin-right: 30px;">❯</button>
+                    <span>Trang</span>
+                    <select class="page-select">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                    </select>
+                    <span style="margin-left: 50px;">Hiển thị</span>
+                    <select class="page-select">
+                        <option value="1" selected>100</option>
+                        <option value="2">200</option>
+                    </select>
+                    <span style="margin-left: 5px;">ca</span>
+                    <span style="margin-left: 50px;">Tổng số ca: <b>430</b></span>
+                </div>
+                <div class="table-1">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col"><input type="checkbox" class="custom-control-input">
+                                    Trạng thái</th>
+                                <th scope="col">Tên bệnh nhân</th>
+                                <th scope="col">Mã bệnh nhân</th>
+                                <th scope="col">Năm sinh</th>
+                                <th scope="col">Giới tính</th>
+                                <th scope="col">TT bổ sung</th>
+                                <th scope="col">Ngày/giờ chụp</th>
+                                <th scope="col">Dịch vụ</th>
+                                <th scope="col">Modallity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Chưa đọc</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                        <label class="custom-control-label" for="customCheck2">Chưa đọc</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck3" checked>
+                                        <label class="custom-control-label" for="customCheck1">Đã in</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                        <label class="custom-control-label" for="customCheck1">Chưa đọc</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                        <label class="custom-control-label" for="customCheck1">Chưa đọc</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                        <label class="custom-control-label" for="customCheck1">Chưa đọc</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                        <label class="custom-control-label" for="customCheck1">Chưa đọc</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                        <label class="custom-control-label" for="customCheck1">Chưa đọc</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                        <label class="custom-control-label" for="customCheck1">Chưa đọc</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                        <label class="custom-control-label" for="customCheck1">Chưa đọc</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="head-table-2">Ca liên quan</div>
+                <div class="table-2">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col"><input type="checkbox" class="custom-control-input">
+                                    Trạng thái</th>
+                                <th scope="col">Tên bệnh nhân</th>
+                                <th scope="col">Mã bệnh nhân</th>
+                                <th scope="col">Năm sinh</th>
+                                <th scope="col">Giới tính</th>
+                                <th scope="col">TT bổ sung</th>
+                                <th scope="col">Ngày/giờ chụp</th>
+                                <th scope="col">Dịch vụ</th>
+                                <th scope="col">Modallity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Chưa đọc</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                        <label class="custom-control-label" for="customCheck2">Chưa đọc</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck3" checked>
+                                        <label class="custom-control-label" for="customCheck1">Đã in</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                        <label class="custom-control-label" for="customCheck1">Chưa đọc</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                        <label class="custom-control-label" for="customCheck1">Chưa đọc</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                        <label class="custom-control-label" for="customCheck1">Chưa đọc</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                        <label class="custom-control-label" for="customCheck1">Chưa đọc</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                        <label class="custom-control-label" for="customCheck1">Chưa đọc</label>
+                                    </div>
+                                </td>
+                                <td>Nguyen Van Hinh</td>
+                                <td>123456789</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>icon</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                                <td>XA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="name1">Trống</div>
+            <div class="tab-pane fade" id="name2">Trống</div>
+        </div>
+    </div>
+</body>
+<script>
+    flatpickr("#dateRangePicker", {
+        mode: "range",
+        dateFormat: "d/m/Y"
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

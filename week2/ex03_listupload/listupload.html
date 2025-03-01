@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="listupload.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<header>
+    <div class="header">
+        <div class="left-header">
+            <div class="logo d-flex justify-content-center">
+                <div class="image" style="width: 80px; height: 45px; overflow: hidden;">
+                    <img class="logo-image" src="../img/logo-minerva.png" alt="" width="80px" height="60px">
+                </div>
+                <h6>MINERVA PACS</h6>
+            </div>
+        </div>
+        <div class="right-header">
+            <div class="button d-flex justify-content-center">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="button-item-left"><i class='bx bxs-folder-open'></i></button>
+                    <button class="button-item-right"><i class='bx bxs-collection'></i></button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="button-item-left"><i class='bx bxs-folder-open'></i></button>
+                    <button class="button-item-right"><i class='bx bxs-collection'></i></button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="button-chart"><i class='bx bx-line-chart'></i></button>
+                </div>
+            </div>
+            <div class="master">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Master (K1, K2) </option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="user">
+                <div class="avatar">
+                    <img class="avatar-img" src="../img/avatar.jpg" alt="">
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle custom-dropdown" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Bs. Nguyễn Mạnh Hà
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="body">
+        <div class="upload-form">
+            <div class="upload-box">
+                <button class="upload-btn">
+                    <i class='bx bx-cloud-upload' style="font-size: 16px;"></i>
+                    <span>Chọn ảnh</span>
+                </button>
+                <p>hoặc</p>
+                <p>Kéo thả file, thư mục ảnh dicom</p>
+            </div>
+        </div>
+        <div class="note">
+            <ul>
+                <li>- Chức năng hỗ trợ tốt trên trình duyệt Chrome hoặc Cốc cốc!</li>
+                <li>- Giải nén thư mục chứa ảnh dicom trước khi tải lên</li>
+                <li>- Chọn Tự động xóa nếu không muốn lưu trữ lâu dài trên PACS</li>
+            </ul>
+        </div>
+        <div class="table-responsive">
+            <!-- bootstrap tabs tạo thanh menu tab -->
+            <ul class="nav nav-tabs" style="background-color: #b7b7b6;">
+                <li class="nav-item">
+                    <a class="nav-link select active" id="tab-list" data-bs-toggle="tab" href="#list"><b>Danh sách ca</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link error" id="tab-error" data-bs-toggle="tab" href="#error">Lỗi</a>
+                </li>
+            </ul>
+            <div class="pagination-container">
+                <button class="page-btn" style="margin-left: 30px;">❮</button>
+                <button class="page-btn" style="margin-right: 30px;">❯</button>
+                <span>Trang</span>
+                <select class="page-select">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                </select>
+                <span style="margin-left: 50px;">Hiển thị</span>
+                <select class="page-select">
+                    <option value="1" selected>100</option>
+                    <option value="2">200</option>
+                </select>
+                <span style="margin-left: 5px;">ca</span>
+                <span style="margin-left: 50px;">Tổng số ca: <b>430</b></span>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="tab-list">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Tên bệnh nhân</th>
+                                <th>Mã bệnh nhân</th>
+                                <th>Năm sinh</th>
+                                <th>Giới tính</th>
+                                <th>Ngày/Giờ chụp</th>
+                                <th>Dịch vụ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nguyen Van Hinh</td>
+                                <td>108432153</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                            </tr>
+                            <tr>
+                                <td>Nguyen Van Hinh</td>
+                                <td>108432153</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                            </tr>
+                            <tr>
+                                <td>Nguyen Van Hinh</td>
+                                <td>108432153</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                            </tr>
+                            <tr style="background-color: #236EE3; color:white;">
+                                <td>Nguyen Van Hinh</td>
+                                <td>108432153</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                            </tr>
+                            <tr>
+                                <td>Nguyen Van Hinh</td>
+                                <td>108432153</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                            </tr>
+                            <tr>
+                                <td>Nguyen Van Hinh</td>
+                                <td>108432153</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                            </tr>
+                            <tr>
+                                <td>Nguyen Van Hinh</td>
+                                <td>108432153</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                            </tr>
+                            <tr>
+                                <td>Nguyen Van Hinh</td>
+                                <td>108432153</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                            </tr>
+                            <tr>
+                                <td>Nguyen Van Hinh</td>
+                                <td>108432153</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                            </tr>
+                            <tr>
+                                <td>Nguyen Van Hinh</td>
+                                <td>108432153</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                            </tr>
+                            <tr>
+                                <td>Nguyen Van Hinh</td>
+                                <td>108432153</td>
+                                <td>1989</td>
+                                <td>Nam</td>
+                                <td>01/01/2018</td>
+                                <td>Chụp XQuang ngực</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="error">
+                    <h6>Trống</h6>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

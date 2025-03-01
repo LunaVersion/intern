@@ -1,0 +1,139 @@
+header {
+    position: relative;
+    background-color: #DBDBDB;
+    height: 65px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 9px;
+}
+.right-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user {
+    display: flex;
+    justify-content: center;
+}
+.logo {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.logo-image {
+    filter: grayscale(100%);
+}
+.btn-group {
+    height: 20px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+}
+.button-item-left {
+    border: none;
+    border-radius: 10% 0 0 10%;
+    background-color: #C5C5C5;
+}
+.button-item-right {
+    border: none;
+    border-radius: 0 10% 10% 0;
+    background-color: white;
+}
+.button-chart {
+    border: none;
+    border-radius: 10%;
+    background-color: white;
+}
+.form-select {
+    background-color: #DBDBDB !important;
+    border: none !important;
+}
+.user {
+    display: flex;
+    align-items: center;
+}
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.avatar-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.custom-dropdown {
+    background-color: #DBDBDB !important; 
+    color: black !important; 
+    border: none  !important;
+}
+/* ---------------------------------------------- */
+.upload-form {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+.upload-box {
+    border: 5px dashed #ccc;
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 40px;
+    border-radius: 5px;
+}
+.upload-btn {
+    height: 60px;
+    width: 150px;
+    background-color: #155ED1;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.upload-btn:hover {
+    background-color: #0056b3;
+}
+.note {
+    background-color: #f5f5f5;
+    padding: 15px;
+    margin: 20px;
+}
+ul {
+    list-style: none;
+}
+#list {
+    overflow-y: auto;
+    max-height: 500px; 
+}
+
+/* css cho table */
+thead {
+    background-color: #DBDBDB;
+}
+.select  {
+    background-color: #DBDBDB !important;
+}
+.nav-link {
+    color: black !important
+}
+.pagination-container {
+    background-color: #DBDBDB;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.page-btn {
+    border: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 15%;
+}
+.page-select {
+    border: none;
+    border-radius: 15%;
+    margin-left: 10px;
+    padding-right: 5px;
+}
