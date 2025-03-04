@@ -113,6 +113,9 @@ ul {
 thead {
     background-color: #DBDBDB;
 }
+thead th {
+    font-weight: normal;
+}
 .select  {
     background-color: #DBDBDB !important;
 }
@@ -136,4 +139,8 @@ thead {
     border-radius: 15%;
     margin-left: 10px;
     padding-right: 5px;
+}
+.tab-pane {
+    height: 350px;
+    overflow-y: auto;
 }

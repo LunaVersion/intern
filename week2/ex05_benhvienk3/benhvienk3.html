@@ -17,7 +17,7 @@
                 <div class="image" style="width: 80px; height: 45px; overflow: hidden;">
                     <img class="logo-image" src="../img/logo-minerva.png" alt="" width="80px" height="60px">
                 </div>
-                <h6>PHẦN MỀM CHUẨN ĐOÁN HÌNH ẢNH</h6>
+                <h6>MINERVA PACS</h6>
             </div>
         </div>
         <div class="right-header">
@@ -208,10 +208,10 @@
                         </div>
                     </div>
                     <div class="inf requires">
-                        <b>YÊU CẦU CHUẨN ĐOÁN</b>
+                        <b>YÊU CẦU CHẨN ĐOÁN</b>
                         <div class="row">
                             <div class="col-4">Ưu tiên:</div>
-                            <div class="col-8">CC</div>
+                            <div class="col-8" style="color: red; font-weight: bold;">CC</div>
                         </div>
                         <div class="row">
                             <div class="col-4">CD lâm sàng:</div>
@@ -233,11 +233,11 @@
             </div>
         </div>
     </div>
-    <div class="content" style="margin-left: 275px;">
+    <div class="content-body" style="margin-left: 290px; margin-top: 65px;">
         <ul class="nav nav-tabs content" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#danh-sach-ca">Danh sách
-                    ca</button>
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#danh-sach-ca">
+                    <b>Danh sách ca</b></button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" data-bs-toggle="tab" data-bs-target="#name1">Đoan Hoang Giang</button>
@@ -275,10 +275,12 @@
                             <input type="text" class="form-control" id="ket-qua-doc">
                         </div>
                         <div class="col-md-1 d-flex align-items-end">
-                            <button id="reset" class="form-control">Làm mới</button>
+                            <button id="reset" class="form-control"><i class='bx bx-refresh'></i> Làm mới</button>
                         </div>
                         <div class="col-md-1 d-flex align-items-end">
-                            <button id="nang-cao" class="form-control">Nâng cao</button>
+                            <button id="nang-cao" class="form-control"
+                                style="background-color: #236EE3; color: white;"><i class='bx bxs-cog'></i> Nâng
+                                cao</button>
                         </div>
                     </div>
                     <div class="row g-3">
@@ -357,7 +359,7 @@
                                 <td>123456789</td>
                                 <td>1989</td>
                                 <td>Nam</td>
-                                <td>icon</td>
+                                <td><i class='bx bxs-envelope'></i></td>
                                 <td>01/01/2018</td>
                                 <td>Chụp XQuang ngực</td>
                                 <td>XA</td>
@@ -373,28 +375,29 @@
                                 <td>123456789</td>
                                 <td>1989</td>
                                 <td>Nam</td>
-                                <td>icon</td>
+                                <td><i class='bx bxs-envelope'></i></td>
                                 <td>01/01/2018</td>
                                 <td>Chụp XQuang ngực</td>
                                 <td>XA</td>
                             </tr>
-                            <tr>
+                            <tr class="blue">
                                 <td>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck3" checked>
-                                        <label class="custom-control-label" for="customCheck1">Đã in</label>
+                                        <label class="custom-control-label" for="customCheck1" style="color: white;">Đã
+                                            in</label>
                                     </div>
                                 </td>
-                                <td>Nguyen Van Hinh</td>
-                                <td>123456789</td>
-                                <td>1989</td>
-                                <td>Nam</td>
-                                <td>icon</td>
-                                <td>01/01/2018</td>
-                                <td>Chụp XQuang ngực</td>
-                                <td>XA</td>
+                                <td style="color: white;">Nguyen Van Hinh</td>
+                                <td style="color: white;">123456789</td>
+                                <td style="color: white;">1989</td>
+                                <td style="color: white;">Nam</td>
+                                <td style="color: white;"><i class='bx bxs-envelope'></i></td>
+                                <td style="color: white;">01/01/2018</td>
+                                <td style="color: white;">Chụp XQuang ngực</td>
+                                <td style="color: white;">XA</td>
                             </tr>
-                            <tr>
+                            <tr class="green">
                                 <td>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck4">
@@ -405,28 +408,29 @@
                                 <td>123456789</td>
                                 <td>1989</td>
                                 <td>Nam</td>
-                                <td>icon</td>
+                                <td><i class='bx bxs-envelope'></i></td>
                                 <td>01/01/2018</td>
                                 <td>Chụp XQuang ngực</td>
                                 <td>XA</td>
                             </tr>
-                            <tr>
+                            <tr class="yellow">
                                 <td>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                        <label class="custom-control-label" for="customCheck1">Chưa đọc</label>
+                                        <label class="custom-control-label" for="customCheck1"
+                                            style="color: #FFC336;">Chưa đọc</label>
                                     </div>
                                 </td>
-                                <td>Nguyen Van Hinh</td>
-                                <td>123456789</td>
-                                <td>1989</td>
-                                <td>Nam</td>
-                                <td>icon</td>
-                                <td>01/01/2018</td>
-                                <td>Chụp XQuang ngực</td>
-                                <td>XA</td>
+                                <td style="color: #FFC336;">Nguyen Van Hinh</td>
+                                <td style="color: #FFC336;">123456789</td>
+                                <td style="color: #FFC336;">1989</td>
+                                <td style="color: #FFC336;">Nam</td>
+                                <td style="color: #FFC336;"><i class='bx bxs-envelope'></i></td>
+                                <td style="color: #FFC336;">01/01/2018</td>
+                                <td style="color: #FFC336;">Chụp XQuang ngực</td>
+                                <td style="color: #FFC336;">XA</td>
                             </tr>
-                            <tr>
+                            <tr class="red">
                                 <td>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck6">
@@ -437,7 +441,7 @@
                                 <td>123456789</td>
                                 <td>1989</td>
                                 <td>Nam</td>
-                                <td>icon</td>
+                                <td><i class='bx bxs-envelope'></i></td>
                                 <td>01/01/2018</td>
                                 <td>Chụp XQuang ngực</td>
                                 <td>XA</td>
@@ -453,7 +457,7 @@
                                 <td>123456789</td>
                                 <td>1989</td>
                                 <td>Nam</td>
-                                <td>icon</td>
+                                <td><i class='bx bxs-envelope'></i></td>
                                 <td>01/01/2018</td>
                                 <td>Chụp XQuang ngực</td>
                                 <td>XA</td>
@@ -469,7 +473,7 @@
                                 <td>123456789</td>
                                 <td>1989</td>
                                 <td>Nam</td>
-                                <td>icon</td>
+                                <td><i class='bx bxs-envelope'></i></td>
                                 <td>01/01/2018</td>
                                 <td>Chụp XQuang ngực</td>
                                 <td>XA</td>
@@ -485,7 +489,7 @@
                                 <td>123456789</td>
                                 <td>1989</td>
                                 <td>Nam</td>
-                                <td>icon</td>
+                                <td><i class='bx bxs-envelope'></i></td>
                                 <td>01/01/2018</td>
                                 <td>Chụp XQuang ngực</td>
                                 <td>XA</td>
@@ -501,7 +505,7 @@
                                 <td>123456789</td>
                                 <td>1989</td>
                                 <td>Nam</td>
-                                <td>icon</td>
+                                <td><i class='bx bxs-envelope'></i></td>
                                 <td>01/01/2018</td>
                                 <td>Chụp XQuang ngực</td>
                                 <td>XA</td>
@@ -509,7 +513,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="head-table-2">Ca liên quan</div>
+                <div class="head-table-2"><b>Ca liên quan</b></div>
                 <div class="table-2">
                     <table class="table table-bordered table-striped">
                         <thead>
@@ -538,7 +542,7 @@
                                 <td>123456789</td>
                                 <td>1989</td>
                                 <td>Nam</td>
-                                <td>icon</td>
+                                <td><i class='bx bxs-envelope'></i></td>
                                 <td>01/01/2018</td>
                                 <td>Chụp XQuang ngực</td>
                                 <td>XA</td>
@@ -554,7 +558,7 @@
                                 <td>123456789</td>
                                 <td>1989</td>
                                 <td>Nam</td>
-                                <td>icon</td>
+                                <td><i class='bx bxs-envelope'></i></td>
                                 <td>01/01/2018</td>
                                 <td>Chụp XQuang ngực</td>
                                 <td>XA</td>
@@ -570,7 +574,7 @@
                                 <td>123456789</td>
                                 <td>1989</td>
                                 <td>Nam</td>
-                                <td>icon</td>
+                                <td><i class='bx bxs-envelope'></i></td>
                                 <td>01/01/2018</td>
                                 <td>Chụp XQuang ngực</td>
                                 <td>XA</td>
@@ -586,7 +590,7 @@
                                 <td>123456789</td>
                                 <td>1989</td>
                                 <td>Nam</td>
-                                <td>icon</td>
+                                <td><i class='bx bxs-envelope'></i></td>
                                 <td>01/01/2018</td>
                                 <td>Chụp XQuang ngực</td>
                                 <td>XA</td>
@@ -602,7 +606,7 @@
                                 <td>123456789</td>
                                 <td>1989</td>
                                 <td>Nam</td>
-                                <td>icon</td>
+                                <td><i class='bx bxs-envelope'></i></td>
                                 <td>01/01/2018</td>
                                 <td>Chụp XQuang ngực</td>
                                 <td>XA</td>
@@ -618,7 +622,7 @@
                                 <td>123456789</td>
                                 <td>1989</td>
                                 <td>Nam</td>
-                                <td>icon</td>
+                                <td><i class='bx bxs-envelope'></i></td>
                                 <td>01/01/2018</td>
                                 <td>Chụp XQuang ngực</td>
                                 <td>XA</td>
@@ -634,7 +638,7 @@
                                 <td>123456789</td>
                                 <td>1989</td>
                                 <td>Nam</td>
-                                <td>icon</td>
+                                <td><i class='bx bxs-envelope'></i></td>
                                 <td>01/01/2018</td>
                                 <td>Chụp XQuang ngực</td>
                                 <td>XA</td>
@@ -650,13 +654,195 @@
                                 <td>123456789</td>
                                 <td>1989</td>
                                 <td>Nam</td>
-                                <td>icon</td>
+                                <td><i class='bx bxs-envelope'></i></td>
                                 <td>01/01/2018</td>
                                 <td>Chụp XQuang ngực</td>
                                 <td>XA</td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="toolbar">
+                    <div class="tool">
+                        <div class="tool-button">
+                            <button class="form-control" id="1"><i class='bx bxs-file'></i></button>
+                            <label for="1" class="form-label">Nhận ca</label>
+                        </div>
+                    </div>
+                    <div class="tool">
+                        <div class="tool-button">
+                            <button class="form-control"><i class='bx bx-search-alt-2'></i></i></button>
+                            <label for="1" class="form-label">Xem ảnh <br>Alt+V</label>
+                        </div>
+                        <div class="tool-button">
+                            <button class="form-control"><i class='bx bxs-camera'></i></button>
+                            <label for="" class="form-label">Chụp ảnh</label>
+                        </div>
+                        <div class="tool-button">
+                            <button class="form-control"><i class='bx bx-link'></i></button>
+                            <label for="" class="form-label">Link ảnh</label>
+                        </div>
+                    </div>
+                    <div class="tool">
+                        <div class="tool-button">
+                            <button class="form-control"><i class='bx bx-plus'></i></button>
+                            <label for="" class="form-label">Thêm CĐ<br>Alt+N</label>
+                        </div>
+                        <div class="tool-button">
+                            <button class="form-control"><i class='bx bxs-check-square'></i></button>
+                            <label for="" class="form-label">Duyệt CĐ<br>Alt+N</label>
+                        </div>
+                        <div class="tool-button">
+                            <button class="form-control"><i class='bx bxs-file'></i></button>
+                            <label for="" class="form-label">Lưu nháp <br>Alt+D</label>
+                        </div>
+                        <div class="tool-button">
+                            <button class="form-control"><i class='bx bxs-pencil'></i></button>
+                            <label for="" class="form-label">Sửa CĐ<br>Alt+E</label>
+                        </div>
+                        <div class="tool-button">
+                            <button class="form-control"><i class='bx bxs-lock-open'></i></button>
+                            <label for="" class="form-label">Hủy khóa <br>Alt+C</label>
+                        </div>
+                    </div>
+                    <div class="tool">
+                        <div class="tool-button">
+                            <button class="form-control"><i class='bx bxs-printer'></i></button>
+                            <label for="" class="form-label">In <br>Alt+P</label>
+                        </div>
+                        <div class="tool-button">
+                            <button class="form-control"><i class='bx bxs-printer'></i></button>
+                            <label for="" class="form-label">Duyệt và <br>In</label>
+                        </div>
+                        <div class="tool-button">
+                            <button class="form-control"><i class='bx bxs-printer'></i></button>
+                            <label for="" class="form-label">In nhanh</label>
+                        </div>
+                    </div>
+                    <div class="tool">
+                        <div class="tool-button">
+                            <button class="form-control"><i class='bx bxs-package'></i></button>
+                            <label for="" class="form-label">Thêm vật tư <br>Alt+C</label>
+                        </div>
+                        <div class="tool-button">
+                            <button class="form-control"><i class='bx bx-transfer-alt'></i></button>
+                            <label for="" class="form-label">Chuyển ca <br>Alt+C</label>
+                        </div>
+                        <div class="tool-button">
+                            <button class="form-control"><i class='bx bxs-message-detail'></i></button>
+                            <label for="" class="form-label">Ghi chú<br>Alt+C</label>
+                        </div>
+                    </div>
+                    <div class="tool">
+                        <div class="tool-button">
+                            <button class="form-control"><i class='bx bxs-message-detail'></i></button>
+                            <label for="" class="form-label">Ghi chú<br>Alt+C</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="diagnose-filter">
+                    <label for="chan-doan">Chẩn đoán</label>
+                    <select id="chan-doan" class="form-select bg-white mx-3" style="width: 400px;">
+                        <option selected>Lần 3 | Chẩn đoán mới | BS Nguyễn Hùng</option>
+                        <option>...</option>
+                    </select>
+                    <label for="chan-doan" style="margin-left: 30px;">Dịch vụ</label>
+                    <select id="chan-doan" class="form-select bg-white mx-3" style="width: 250px;">
+                        <option selected>XA021 - XQuang chân</option>
+                        <option>...</option>
+                    </select>
+                    <label for="chan-doan" style="margin-left: 30px;">Mẫu KQ</label>
+                    <select id="chan-doan" class="form-select bg-white mx-3" style="width: 250px;">
+                        <option selected>XA021 - XQuang chân</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="information">
+                    <div class="note">
+                        <p>Kỹ thuật chụp: Chụp XQuang cột sống thẳng nghiêng |</p>
+                        <p>-- Không thấy gãy xẹp các đốt sống</p>
+                        <p>-- Không thấy hẹp các khoảng liên đốt sống</p>
+                        <p>-- Cấu trúc các đốt sống không thấy bất thường</p>
+                        <p class="my-5"> Hiện tại không thấy hình ảnh bất thường xương cột sống cổ trên phim</p>
+                    </div>
+                    <div class="choose-image d-flex">
+                        <div class="col-1 d-flex align-items-center justify-content-center mx-4">
+                            <button class="form-control"><i class='bx bx-images'></i> Chọn ảnh</button>
+                        </div>
+                        <div class="img d-flex">
+                            <img src="../img/XQ1.png" alt="">
+                            <img src="../img/XQ1.png" alt="">
+                            <img src="../img/XQ2.png" alt="">
+                            <img src="../img/XQ3.png" alt="">
+                        </div>
+                    </div>
+                    <div class="upload-image d-flex align-items-center">
+                        <div class="col-1  mx-4">
+                            <button class="form-control" style="background-color: #236EE3; color: white;"><i
+                                    class='bx bxs-camera'></i> Chụp ảnh</button>
+                            <button class="form-control my-3"><i class='bx bx-cloud-upload'></i> Tải lên</button>
+                            <button class="form-control"><i class='bx bxs-cog'></i> Cấu hình</button>
+                        </div>
+                        <div class="img">
+                            <img src="../img/XQ4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="img-inf py-3 px-3">
+                    <div class="row">
+                        <div class="col-md-3 d-flex">
+                            <label for="nguoi-ky">Người ký</label>
+                            <select id="nguoi-ky" class="form-select bg-white mx-3">
+                                <option selected>BS Phạm Tuấn Tú</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 d-flex">
+                            <label for="ma-benh">Mã bệnh ID</label>
+                            <select id="ma-benh" class="form-select bg-white mx-3">
+                                <option selected>A1234</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 d-flex">
+                            <label for="the-tag">Thẻ tag</label>
+                            <select id="the-tag" class="form-select bg-white mx-3">
+                                <option selected>Tag name</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 d-flex">
+                            <label for="nguoi-chup">Người chụp</label>
+                            <select id="nguoi-chup" class="form-select bg-white mx-3">
+                                <option selected>BS Phạm Tuấn Tú</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 d-flex">
+                            <label for="y-ta">Y tá</label>
+                            <select id="y-ta" class="form-select bg-white mx-3">
+                                <option selected>Lê Minh Thúy</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 d-flex">
+                            <label for="chan-doan">Chẩn đoán trước</label>
+                            <select id="chan-doan" class="form-select bg-white mx-3">
+                                <option selected>Có</option>
+                                <option>Không</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 d-flex">
+                            <label for="giai-phau">Giải phẫu</label>
+                            <select id="giai-phau" class="form-select bg-white mx-3">
+                                <option selected>A1234</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="name1">Trống</div>

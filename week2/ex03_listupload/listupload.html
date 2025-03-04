@@ -36,9 +36,7 @@
             <div class="master">
                 <select class="form-select" aria-label="Default select example">
                     <option selected>Master (K1, K2) </option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="">...</option>
                 </select>
             </div>
             <div class="user">
@@ -51,9 +49,9 @@
                         Bs. Nguyễn Mạnh Hà
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">...</a></li>
+                        <li><a class="dropdown-item" href="#">...</a></li>
+                        <li><a class="dropdown-item" href="#">...</a></li>
                     </ul>
                 </div>
             </div>
@@ -69,7 +67,7 @@
                     <i class='bx bx-cloud-upload' style="font-size: 16px;"></i>
                     <span>Chọn ảnh</span>
                 </button>
-                <p>hoặc</p>
+                <p class="mt-2">hoặc</p>
                 <p>Kéo thả file, thư mục ảnh dicom</p>
             </div>
         </div>
@@ -107,7 +105,7 @@
                 <span style="margin-left: 50px;">Tổng số ca: <b>430</b></span>
             </div>
             <div class="tab-content">
-                <div class="tab-pane fade show active" id="tab-list">
+                <div class="tab-pane fade show active" id="tab-list"> 
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -115,8 +113,15 @@
                                 <th>Mã bệnh nhân</th>
                                 <th>Năm sinh</th>
                                 <th>Giới tính</th>
-                                <th>Ngày/Giờ chụp</th>
-                                <th>Dịch vụ</th>
+                                <th><Select class="form-select" style="width: 150px; padding-left: 5px !important;">
+                                    <option value="" selected>Ngày/giờ chụp</option>
+                                    <option value="">...</option>
+                                </Select></th>
+                                <th><Select class="form-select" style="width: 100px; padding-left: 5px !important;">
+                                    <option value="" selected>Dịch vụ</option>
+                                    <option value=""> Chụp XQuang ngực</option>
+                                    <option value=""> Other</option>
+                                </Select></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -215,7 +220,6 @@
                     <h6>Trống</h6>
                 </div>
             </div>
-
         </div>
     </div>
 </body>

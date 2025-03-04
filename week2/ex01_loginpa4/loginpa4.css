@@ -30,6 +30,7 @@ body {
     padding-left: 15px;
     font-size: 20px;
     margin: 5px;
+    border: 2px solid #dbdbdb;
 }
 .btn {
     width: 85%;
@@ -37,6 +38,7 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 42px;
+    background-color: #155ED1 !important;
 }
 .lang {
     display: flex;
