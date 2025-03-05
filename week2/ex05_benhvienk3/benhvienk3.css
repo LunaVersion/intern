@@ -1,3 +1,6 @@
+body {
+    overflow-x: hidden;
+}
 .header {
     position: fixed;
     display: flex;
@@ -161,13 +164,13 @@
 }
 
 .top {
-    /* height: 40vh; */
+    height: 40vh;
     padding-bottom: 25px;
 }
 
 .under {
     overflow-y: auto;
-    /* height: 60vh; */
+    height: 60vh;
 }
 
 .under .nav-link {
@@ -189,7 +192,9 @@
     padding-bottom: 10px;
     border-bottom: 2px solid #c5c5c5;
 }
-
+.nav-link.active {
+    background-color: #DBDBDB !important;
+}
 /* content bên phải */
 .menu {
     background-color: #dbdbdb;
@@ -230,6 +235,7 @@ thead {
     border-radius: 15%;
     margin-left: 10px;
     padding-right: 5px;
+    padding-left: 15px;
 }
 
 /* table */
@@ -244,19 +250,6 @@ thead {
 }
 
 /* toolbar */
-.toolbar {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 15px;
-    background-color: #dbdbdb;
-    border-bottom: 2px solid #C5C5C5;
-}
-
-.tool {
-    display: flex;
-    justify-content: space-between;
-}
-
 .tool-button {
     margin-left: 5px;
     margin-right: 5px;
