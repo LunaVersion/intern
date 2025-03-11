@@ -323,7 +323,8 @@ thead {
 }
 
 .img-inf .form-select {
-    width: 200px;
+    width: 220px;
+    height: 55px;
     margin-bottom: 20px;
 }
 
@@ -355,4 +356,56 @@ thead {
 .information {
     height: 700px;
     overflow-y: auto;
+}
+/*  */
+.select2-container--default .select2-selection--multiple {
+    border: none !important;
+    margin-left: 15px;
+    width: 220px;
+}
+
+.select2-selection__clear {
+    color:white;
+}
+.select2-selection__choice {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px; /* Căn chỉnh nội dung */
+}
+
+.select2-selection__choice__remove {
+    order: 2;  /* Đưa nút X ra phía sau */
+    font-size: 25px;
+    margin-left: 5px; /* Tạo khoảng cách với tên */
+}
+/*  */
+/* .col-md-3 .multiple-select{
+    position: relative;
+} */
+.icon {
+    position: relative;
+}
+.icon .nguoiky {
+    position: absolute;
+    left: 33px;
+    top: 15px;
+    font-size: larger;
+}
+.icon .thetag {
+    position: absolute;
+    left: 85px;
+    top: 15px;
+    font-size: larger;
+}
+.icon .nguoichup {
+    position: absolute;
+    left: 35px;
+    top: 15px;
+    font-size: larger;
+}
+.icon .yta {
+    position: absolute;
+    left: 60px;
+    top: 15px;
+    font-size: larger;
 }
