@@ -387,7 +387,7 @@ thead {
 }
 .icon .nguoiky {
     position: absolute;
-    left: 33px;
+    left: 20px;
     top: 15px;
     font-size: larger;
 }
@@ -399,13 +399,13 @@ thead {
 }
 .icon .nguoichup {
     position: absolute;
-    left: 35px;
+    left: 20px;
     top: 15px;
     font-size: larger;
 }
 .icon .yta {
     position: absolute;
-    left: 60px;
+    left: 47px;
     top: 15px;
     font-size: larger;
 }
