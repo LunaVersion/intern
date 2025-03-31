@@ -40,7 +40,6 @@ $year = $_POST['year'] ?? null;
             </form>
         </div>
             <div class="show-query-1 my-5" style="display: none;" id='1'>
-                <?php if (!empty($staffList)) : ?>
                     <table class='table border'>
                         <thead>
                             <tr>
@@ -60,10 +59,7 @@ $year = $_POST['year'] ?? null;
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
-                    </table>
-                <?php else : ?>
-                    <p>Không có nhân viên nào.</p>
-                <?php endif; ?>             
+                    </table>            
             </div>
             <div class="show-query-2 my-5" style="display: none;" id='2'>
                 <h4>Lấy danh sách các nhân viên trong mỗi phòng ban</h4>

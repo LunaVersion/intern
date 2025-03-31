@@ -23,15 +23,15 @@ class Staff extends Controller {
             $thang_nhan_luong = $_POST['thang-nhan-luong'];
             $chuc_vu = $_POST['chuc-vu'];
 
-            $staffModel = $this->model('StaffModel');
-            $id_nhan_vien = $staffModel->insertStaff($ho_ten,$ngay_sinh,$gioi_tinh,$so_dien_thoai,$email,$dia_chi,$avatar);
+            // $staffModel = $this->model('StaffModel');
+            $id_nhan_vien = $this->staffModel->insertStaff($ho_ten,$ngay_sinh,$gioi_tinh,$so_dien_thoai,$email,$dia_chi,$avatar);
 
-            $staffModel->insertSalary($id_nhan_vien,$so_tien_luong,$thang_nhan_luong);
+            $this->staffModel->insertSalary($id_nhan_vien,$so_tien_luong,$thang_nhan_luong);
 
-            $staffModel->insertDepartmentsStaffModel($id_phong_ban,$id_nhan_vien,$chuc_vu);
+            $this->staffModel->insertDepartmentsStaffModel($id_phong_ban,$id_nhan_vien,$chuc_vu);
         }
-        // echo "Thành công";
         $this->view('home/link');
+        exit;
     }
 
     // public function index() {
@@ -69,7 +69,7 @@ class Staff extends Controller {
     // }
 
     // nên gộp index và query lại
-    public function test() {
+    public function index() {
         $data = [
             'staffList' => $this->staffModel->getAllStaffAndDepartment(),
             'staffWithDepartment' => $this->staffModel->getAllStaffWithDepartment(),
@@ -90,10 +90,9 @@ class Staff extends Controller {
         }
     
         // Chỉ gọi view **một lần duy nhất**
+        // var_dump($data['staffList']); die();
         $this->view('home/query', $data);
     }
     
 }
-$staffController = new Staff();
-$staffController->test();
 ?>
