@@ -16,30 +16,15 @@ class UserController extends Controller
 
             $this->userModel->insertUser($name,$email);
         }
-        $this->view('link'); 
-        // exit();
+        // $this->view('link'); 
+        $users = $this->userModel->getAllUsers();
+        $this->view('user', ['users' => $users]);
+        exit();
     }
     public function index() {
         $users = $this->userModel->getAllUsers();
         $this->view('user', ['users' => $users]);
     }
-    public function edit() {
-        if (!isset($_GET['id'])) {
-            die("Không có ID!");
-        }
-    
-        $id = $_GET['id'];
-
-        $user = $this->userModel->getUserById($id);
-        
-        if (!$user) {
-            die("Người dùng không tồn tại!");
-        }
-    
-        // Hiển thị trang chỉnh sửa
-        $this->view('edit', ['user' => $user]);
-    }
-    
     public function update() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $id = $_POST['id'];
@@ -48,8 +33,9 @@ class UserController extends Controller
     
             $this->userModel->updateUser($id, $name, $email);
     
-            // Chuyển hướng về danh sách nhân viên
-            $this->view('link');
+            // $this->view('link');
+            $users = $this->userModel->getAllUsers();
+            $this->view('user', ['users' => $users]);
             exit;
         }
     }
@@ -61,8 +47,9 @@ class UserController extends Controller
     
         $this->userModel->deleteUser($id);
     
-        // Chuyển hướng về danh sách nhân viên
-        $this->view('link');
+        // $this->view('link');
+        $users = $this->userModel->getAllUsers();
+        $this->view('user', ['users' => $users]);
         exit;
     }
     

@@ -76,49 +76,53 @@
         #form:target ~ #overlay {
             display: block;
         }
-
-
-        
+        .table {
+            overflow-y: scroll;
+            max-height: 500px;
+        }
     </style>
 </head>
 <body>
     <div class="container col-lg-8 mt-5 pt-5">
         <h3>Danh sách người dùng</h3>
         <a href="#form" id="showForm" class="btn btn-primary my-3">Thêm Người Dùng</a>
-        <table class="table table-striped table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Họ tên</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Hành động</th>
-                </tr>
-            </thead>
-            <tbody class="tbody">
-                <?php foreach ($users as $user): ?>
+        <div class="table">
+            <table class="table table-striped table-hover">
+                <thead>
                     <tr>
-                        <td><?= htmlspecialchars($user['id']) ?></td>
-                        <td><?= htmlspecialchars($user['name']) ?></td>
-                        <td><?= htmlspecialchars($user['email']) ?></td>
-                        <td>
-                        <button class="btn btn-warning btn-edit"
-                                data-id="<?= $user['id'] ?>"
-                                data-name="<?= $user['name'] ?>"
-                                data-email="<?= $user['email'] ?>">
-                            Sửa
-                        </button>
-                        <button class="btn btn-warning btn-delete"
-                                data-id="<?= $user['id'] ?>"
-                                data-name="<?= $user['name'] ?>"
-                                data-email="<?= $user['email'] ?>">
-                            Xóa
-                        </button>
-                        </td>
+                        <th scope="col" class="px-4">ID</th>
+                        <th scope="col">Họ tên</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Hành động</th>
                     </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-        <a href="../../link" class="btn btn-primary">Chuyển</a>
+                </thead>
+                <tbody class="table-body">
+                    <?php foreach ($users as $user): ?>
+                        <tr>
+                            <td class="px-4"><?= htmlspecialchars($user['id']) ?></td>
+                            <td><?= htmlspecialchars($user['name']) ?></td>
+                            <td><?= htmlspecialchars($user['email']) ?></td>
+                            <td>
+                            <button class="btn btn-warning btn-edit"
+                                    data-id="<?= $user['id'] ?>"
+                                    data-name="<?= $user['name'] ?>"
+                                    data-email="<?= $user['email'] ?>">
+                                Sửa
+                            </button>
+                            <button class="btn btn-warning btn-delete"
+                                    data-id="<?= $user['id'] ?>"
+                                    data-name="<?= $user['name'] ?>"
+                                    data-email="<?= $user['email'] ?>">
+                                Xóa
+                            </button>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- <a href="../../link" class="btn btn-primary">Chuyển</a> -->
     </div>
 
     <div class="container form col-5 px-5 py-5 border" id="form">
@@ -138,24 +142,6 @@
         </form>
     </div>
 
-    <!-- <div class="container edit col-5 px-5 py-5 border" id="edit">
-        <form action="http://localhost:8000/update" method="POST">
-            <h4 class="text-center">Sửa thông tin người dùng</h4>
-            <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
-            <div class="mb-3">
-                <label for="name" class="form-label">Họ tên</label>
-                <input type="text" class="form-control" name="name" value="<?php echo $user['name']; ?>" required>
-            </div>
-
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" name="email" value="<?php echo $user['email']; ?>" required>
-            </div>
-
-            <a href="#" class="btn btn-secondary">Close</a>
-            <button type="submit" class="btn btn-primary">Cập nhật</button>
-        </form>
-    </div> -->
     <div class="container edit col-5 px-5 py-5 border d-none" id="edit-form">
         <form action="http://localhost:8000/update" method="POST">
             <h4 class="text-center">Sửa thông tin người dùng</h4>
@@ -177,7 +163,7 @@
     </div>
 
     <div id="delete-form" class="container edit col-5 px-5 py-5 border d-none">
-        <p>Bạn có chắc chắn muốn xóa người dùng " <span id="delete-name"></span> " không?</p>
+        <p>Bạn có chắc chắn muốn xóa người dùng "<span id="delete-name"></span>" không?</p>
         <form action="http://localhost:8000/delete" method="POST">
             <input type="hidden" name="id" id="delete-id">
             <button type="button" class="btn btn-secondary btn-delete-close">Hủy</button>
