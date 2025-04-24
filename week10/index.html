@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello React!</title>
+    <script src="https://unpkg.com/react@^16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // React 
+      // dùng ES6 tạo thành phần React lên là App
+      class App extends React.Component {
+        // render là phương thức bắt buộc phải có trong class React.Component
+        // Được sử dụng để hiển thị các nút DOM
+        // phương thức này trả về một phần tử React gọi là JSX
+        // Phần tử React có thể là một thẻ HTML hoặc một thành phần React khác
+        render() {
+          return (
+            <div>
+              <h1>Hello Luna!</h1>
+            </div>
+          );
+        }
+      }
+      // hiển thị class App lên thẻ div có id là root
+      // ReactDOM.render() là phương thức được sử dụng để hiển thị một phần tử React lên DOM
+      ReactDOM.render(<App />, document.getElementById('root'))
+    </script>
+  </body>
+  
+</html>

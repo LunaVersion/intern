@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    margin-top: 20px;
+}
+
+.thead {
+    text-align: left;
+}
+.table {
+    width: 100%;
+
+}
+ .scrollable {
+    width: 60%;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
