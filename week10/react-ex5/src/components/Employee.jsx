@@ -1,4 +1,3 @@
-// components/EmployeeList.js
 import React from "react";
 import employees from "../data/employees";
 import "../css/EmployeeList.css";

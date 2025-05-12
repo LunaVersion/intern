@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Search from "./Search";
 function EmployeeForm() {
     const [employees, setEmployees] = useState([]);
     const [formData, setFormData] = useState({
@@ -10,6 +11,8 @@ function EmployeeForm() {
         address: "",
     });
 
+    const [searchTerm, setSearchTerm] = React.useState("");
+    
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
@@ -100,6 +103,7 @@ function EmployeeForm() {
                 </div>
             </form>
 
+            <Search searchTerm={searchTerm} onSearch={setSearchTerm} />
             <table className="table table-striped">
                 <thead>
                     <tr>
